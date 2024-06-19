@@ -1,0 +1,23 @@
+<html>
+{% extends 'myapp/base.html' %}
+{% block content %}
+<h1>STUDENT DETAILS</h1>
+<table>
+    <thead>
+    <th>sname</th>
+    <th>stclasss</th>
+    <th>ssub</th>
+    </thead>
+    {% for sd in student %}
+    <tr>
+        <td>{{sd.name}}</td>
+        <td>{{sd.sclass}}</td>
+        <td>{{sd.sub}}</td>
+        <td><a href="/delete/{{sd.id}}"><button>DETELE</button></a> <a href="/update/{{sd.id}}"><button>UPDATE</button></a></td>
+    </tr>
+    {% endfor %}
+
+</table>
+<a href="/create"> <button type="submit">ADD NEWSTUDENT</button> </a>
+{% endblock content %}
+</html>

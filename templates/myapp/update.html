@@ -1,0 +1,14 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+<h1>UPDATE STUDENT DETAILS</h1>
+<form method="post">
+    STUDENT NAME<input type="text" name="name" value="{{stu.name}}">
+    STUDENT class<input type="text" name="sclass" value="{{stu.sclass}}">
+    STUDENT subject<input type="text" name="sub" value="{{stu.sub}}">
+    </input>
+        {% csrf_token %}
+        <input type="submit" value="update student" >
+    
+
+</form>
+{% endblock content %}
